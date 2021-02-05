@@ -205,7 +205,7 @@ export default {
     /* 搜索数据 */
     search(type) {
       let self = this;
-      let data = { ...self.form };
+      let data = self.form;
       data.groupIds = self.groupIds;
       getTreeVhicle(data).then(res => {
         self.tableData = res.data.list;
@@ -338,7 +338,7 @@ export default {
       } else {
         //全选
         let self = this;
-        let data = { ...self.form };
+        let data = self.form;
         data.groupIds = self.groupIds;
         data.pageSize = this.total;
         data.currentPage = 1;
